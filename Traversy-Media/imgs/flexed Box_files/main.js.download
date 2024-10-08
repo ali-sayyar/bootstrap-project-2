@@ -1,0 +1,424 @@
+/* */
+// let arr = [1,'ali',2,'xx',55]
+
+// function re (arr = [1,2,3]) {
+//     let narr= []
+//     let ii = arr.length-1
+//     while(ii >= 0){
+//         narr.push(arr[ii])
+//         ii--
+//     }
+//     return narr
+// }
+// function re2 (arr = [1,2,3]) {
+//     for (let i = 0; i < arr.length; i++) {
+//         arr.unshift(...arr.splice(i,1))
+//     }
+//     return arr
+// }
+// function re3 (arr = [1,2,3]) {
+//     let newArr = []
+//     for (el of arr) {
+//         newArr.unshift(el)
+//     }
+//     return newArr
+// }
+
+// console.log(re(arr))
+// console.log(re2(arr))
+// console.log(re3())
+
+/* Function in Function */
+
+// function foreach(arr,fun){
+//     if(typeof arr == 'string'){
+//         arr = arr.split('')
+//     }
+//     for(let i=0 ; i<arr.length ; i++){
+//         fun(arr[i])
+//     }
+// }
+// foreach([1,'ff',3,false,5],function(el){
+//     console.log(el)
+//     document.body.innerHTML+= `-- ${el}`
+// })
+// foreach('ali sa is',function(el){
+//     console.log(el)
+//     document.body.innerHTML+= `-- ${el}`
+// })
+
+/** start chengeing colors */
+
+// let start = document.querySelector('span')
+// start.onclick = function(){
+//     this.style.backgroundColor = "#826"
+//     setInterval(() => {
+//         let random = ''
+//         for(i = 0 ;i < 3;i++){
+//             random += Math.floor(Math.random() * 9)
+//             console.log(random)
+//         }
+//         console.log(random)
+//         document.querySelector('.body').style.backgroundColor = `#${random}`
+//     }, 2000);
+// }
+
+// let arr = [1,2,55,49,5]
+
+// let a  = arr.reduce((p,c,i)=>{
+//     console.log(i)
+// })
+
+// function x(arr){
+//     let a = []
+//     arr.reduce((p,c)=>{
+//         return a[0] = p + c
+//     })
+//     a[1] = arr.length
+//     return a
+// }
+// console.log(x([2,4,5]))
+
+/** knight jumpe */
+
+// function j(s){
+//     let word = ['A','B','C','D','E','F','G','H']
+//     let arr = []
+
+//     arr.push(`${word[word.indexOf(s[0]) - 1]}${s[1]-2}`)
+//     arr.push(`${word[word.indexOf(s[0]) + 1]}${s[1]-2}`)
+//     arr.push(`${word[word.indexOf(s[0]) - 2]}${s[1]-1}`)
+//     arr.push(`${word[word.indexOf(s[0]) + 2]}${s[1]-1}`)
+//     arr.push(`${word[word.indexOf(s[0]) - 2]}${Number(s[1])+1}`)
+//     arr.push(`${word[word.indexOf(s[0]) + 2]}${Number(s[1])+1}`)
+//     arr.push(`${word[word.indexOf(s[0]) - 1]}${Number(s[1])+2}`)
+//     arr.push(`${word[word.indexOf(s[0]) + 1]}${Number(s[1])+2}`)
+//     arr = arr.filter(e=>{
+//         if(e[0]!='u'&&e[1] < 9 && e[1]>0){
+//             return true;
+//         }
+//     })
+//     return arr
+// }
+// console.log(j('F4'))
+
+/** ترتيب الارقام */
+// function sortNum(columns){
+//     let len = columns.length
+//     for(i=0 ; i<len;i++){
+//         let w = columns[i]
+//         for(ii=0;ii<= len;ii++){
+//             if(w >= columns[ii]){
+//                 columns.splice(columns.indexOf(w),1,)
+//                 columns.splice(ii+1,0,w)
+//             }
+//         }
+//     }
+//     return columns
+// }
+
+/** ترتيب الارقام من الاقل للاكث*/
+// function x (arr){
+//     for(let index = 0 ; index < arr.length-1 ; index++){
+//         let num = arr[index];
+//         for(let i = 0 ; i < arr.length ; i++){
+//             console.log(arr)
+//             if(num >= arr[i]){
+//                 arr.splice(arr.indexOf(num),1)
+//                 arr.splice(i,0,num);
+//             }
+//         }
+//     }
+//     return arr
+// }
+// console.log(x([4,9,4,9]))
+
+// console.log(x([2,3,8]))
+// console.log(x([1,1,1,1]))
+// console.log(x([4,5,6,3,2]))
+
+// function x(arr){
+//     let len = arr.length
+//     let newArr = []
+//     for (let i = 0 ; i < len ; i++){
+//         console.log(i,arr.length)
+//         newArr.unshift(Math.max(...arr))
+//         arr.splice(arr.indexOf(Math.max(...arr)),1)
+//     }
+//     console.log(newArr)
+// }
+// x([8,7,1,5,4,1])
+
+// const text = document.getElementById('text')
+// const input = document.getElementById('input')
+
+// text.onclick = function(){
+//     input.value = text.innerHTML
+// }
+
+// input.oninput = function(){
+//     console.log('The input value has changed')
+// }
+
+// function cr(arr){
+//     for(i=0;i<arr.length;i++){
+//         let a = [...String(arr[i])]
+//         for(ii = 0 ; ii < a.length ; ii++){
+//             if(a[ii] == 7){
+//                 console.log(a[ii])
+//                 return 'Boom'
+//             }
+//         }
+//     }
+//     return 'No Saven'
+// }
+
+// let arr = [35, 4, 9, 37]
+// function cr(arr){
+//     let te = 'NO Seven'
+//     arr.forEach(el=>{
+//         let a = [...String(el)]
+//         a.forEach(e=>{
+//             if(e == 7){
+//                 te = 'Boom'
+//             }
+//         })
+//     })
+//     return te
+// }
+// console.log(cr(arr))
+
+document.querySelector(".btn").onclick = function () {
+    document.querySelector("#text").classList.add("open");
+};
+
+document.querySelector(".btn2").onclick = function () {
+    document.querySelector("#text").classList.remove("open");
+};
+
+// let req = new XMLHttpRequest()
+// req.open('POST','./data.json')
+// req.responseType = 'json'
+// req.send(JSON.stringify({'name':'ali'}))
+// req.onload = function(){
+//     console.log(req)
+// }
+
+// function solution(number){
+//     let roNum =  {M:1000,CM:900, D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1 }
+//     roman = ''
+//     while (number > 0) {
+//         for(num in roNum){
+//             if(number >= roNum[num]){
+//                 roman += num
+//                 number = number - roNum[num]
+
+//             }
+//         }
+//     }
+//     return roman
+// }
+// console.log(solution(19))
+
+// function calc(n){
+//     let result = 0
+//     let handle = true
+//     let num = n
+//     while(handle){
+//         let str = String(num).split('0').join('').split('')
+//         if(str.length < 2){
+//             num += Number(str)
+//         } else {
+//             let _n = str[0]
+//             for(i=1;i<str.length;i++){
+//                 _n = _n * str[i]
+//             }
+//             num += _n
+//         }
+//         // 2
+//         let baseNum = 1
+//         while(baseNum < num){
+//             let str1 = String(baseNum).split('0').join('').split('')
+//             if(str1.length < 2){
+//                 baseNum += Number(str1)
+//             } else {
+//                 let _n = str1[0]
+//                 for(i=1;i<str1.length;i++){
+//                     _n = _n * str1[i]
+//                 }
+//                 baseNum += _n
+//             }
+//             if(num == baseNum){
+//                 handle=false
+//             }
+//         }
+//         result++
+//     }
+//     return result
+// }
+// console.log(calc(5000))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let d = new Date();
+// function calc(cMax, sol) {
+//     let arr = [];
+//     for (let i = 1; i <= cMax; i++) {
+//         let nnn = sol;
+//         let x = 1
+//         let y = Math.floor((i*i*i) / 2)
+//         while(y > 0){
+//             y--
+//             x++
+//             if(y*y+x*x==(i*i*i)){
+//                 if()
+//             }
+//         }
+//         if (nnn == 0) {
+//             arr.push(i);
+//         }
+//     }
+//     return arr;
+// }
+
+// console.log(calc(400, 8));
+// console.log((new Date().getTime() - d.getTime()) / 1000);
+
+// ************
+
+let d = new Date();
+// function find_abc_sumsqcube(cMax, sol) {
+//     let arr = [];
+//     for (let i = 1; i <= cMax; i++) {
+//         let nnn = 0;
+//         for (let ii = 1; ii <= i; ii++) {
+//             for (let iii = ii; iii < i; iii++) {
+//                 if ((ii * ii) + (iii * iii) == i * i * i) {
+//                     nnn++;
+//                     // break
+//                 }
+//             }
+//         }
+//         if (nnn == sol) {
+//             arr.push(i);
+//         }
+//     }
+//     console.log('a')
+//     return arr;
+// }
+
+
+// function find_abc_sumsqcube(c_max, num_sol) {
+//     const solutions = {};
+//     for (let c = 2; c <= c_max; c++) {
+//         let count = 0;
+//         for (let a = 1; a * a <= c * c * c; a++) {
+//             let b = Math.sqrt(c * c * c - a * a);
+//             console.log(b)
+//             if (b % 1 === 0 && b >= a) {
+//                 count++;
+//             }
+//         }
+//         if (count === num_sol) {
+//             solutions[c] = true;
+//         }
+//     }
+//     return solutions;
+// }
+
+// console.log(find_abc_sumsqcube(10, 2));
+// console.log((new Date().getTime() - d.getTime()) / 1000);
+
+
+// function xxx(val) {
+//     let o = {
+//         ':)': 0,
+//         ':D': 1,
+//         '>(': 2,
+//         '>:C': 3,
+//         ':/': 4,
+//         ':|': 5,
+//         ':O': 6,
+//         ';)': 7,
+//         '^.^': 8,
+//         ':(': 9,
+//         '': ' '
+//     }
+//     let valu = val.split(' ')
+//     let res = ''
+//     let str = ''
+//     valu.forEach(element => {
+//         res = res + o[element]
+//     });
+//     for (x of res.split(' ')) {
+//         str += String.fromCharCode(Number(x))
+//     }
+//     return str || '\u0000\u0000'
+// }
+
+
+// console.log(xxx(':) :)  >)'))
+
+
+
+fetch('http://api.aladhan.com/v1/hijriCalendarByAddress/1445/11?address=Bushehr Province, Akhand, 96, إيران&method=4')
+    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+        res.data.forEach(e => {
+            cre(e.timings.Fajr, document.querySelector('.d1'))
+        });
+    })
+
+// http://api.aladhan.com/v1/hijriCalendarByCity/1445/11?city=city=akhand&country=iran&method=4
+fetch('http://api.aladhan.com/v1/hijriCalendarByCity/1445/11?city=city=akhand&country=iran&method=4')
+    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+        res.data.forEach(e => {
+            cre(e.timings.Fajr, document.querySelector('.d2'))
+        });
+    })
+
+function cre(v, d) {
+    let div = document.createElement('div')
+    div.textContent = v
+    d.append(div)
+}
+
+
+// http://api.aladhan.com/v1/calendarByCity/2017/4?city=London&country=United Kingdom&method=2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
